@@ -1,0 +1,380 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #3498db;
+  }
+  .mobile-menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #ecf0f1;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  
+  /* Main content styles */
+  main {
+    margin-top: 70px;
+    min-height: calc(100vh - 160px);
+  }
+  
+  h1, h2, h3 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem 0;
+  }
+ 
+  /* Responsive styles  */
+@media screen and (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #2c3e50;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  main {
+    margin-top: 60px;
+  }
+}
+  
+  /* Home page styles */
+  .hero {
+    background-image: url('./images/image\ 15.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* About page styles */
+  .about-section {
+    padding: 2rem 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skill {
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.skill:hover {
+    background-color: #2980b9;
+}
+
+  
+  /* Projects page styles */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-info {
+    padding: 1.5rem;
+  }
+  
+  .project-info h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-info p {
+    margin-bottom: 1rem;
+  }
+  
+  .project-link {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Contact page styles */
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+  
+ 
+
+/* Responsive styles */
+
+  @media screen and (max-width: 480px) {
+    .container {
+      padding: 0 15px;
+    }
+  
+    .logo {
+      font-size: 1.2rem;
+    }
+  
+    .mobile-menu-toggle {
+      font-size: 1.2rem;
+    }
+  }
+
+
+  /* Responsive styles for About page */
+@media screen and (max-width: 768px) {
+    .about-section {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+
+    .profile-image {
+        max-width: 100%;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+}
+  /* about page responsive */
+@media screen and (max-width: 480px) {
+    .about-section {
+        padding: 2rem 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .skill {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

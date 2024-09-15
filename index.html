@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQIB_PORTFOLIO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">AQib.</div>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./pages/about.html">About</a></li>
+                <li><a href="./pages/projects.html">Projects</a></li>
+                <li><a href="./pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>MUHAMMAD AQIB</h1>
+                <p>Web Developer & Designer</p>
+                <a href="./pages/contact.html" class="cta-button">Get in touch</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AQib. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                this.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+            });
+
+            // Close mobile menu when a link is clicked
+            navLinks.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    navLinks.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

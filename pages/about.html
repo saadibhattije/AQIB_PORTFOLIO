@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQIB_PORTFOLIO</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">AQib</div>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h1 class="section-title">About Me</h1>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="../images/Untitled design (1).png" alt="Jme image" class="profile-image">
+                </div>
+                <div class="about-text">
+                    <p>Hi, I'm <b>MUHAMMAD AQIB</b>, a passionate web developer and designer with 5 years of experience in creating beautiful and functional websites. I specialize in front-end development and have a keen eye for design.</p>
+                    <p>My goal is to build user-friendly and visually appealing web applications that solve real-world problems. I'm always eager to learn new technologies and improve my skills.</p>
+                    <h2>Skills</h2>
+                    <div class="skills">
+                        <span class="skill">HTML5</span>
+                        <span class="skill">CSS3</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">React</span>
+                        <span class="skill">Node.js</span>
+                        <span class="skill">UI/UX Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AQib. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                this.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+            });
+
+            // Close mobile menu when a link is clicked
+            navLinks.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    navLinks.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
